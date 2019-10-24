@@ -1,7 +1,7 @@
 # ![](res/imgs/98-movies-logo.png?raw=true "98 Movies")
 Este projeto foi idealizado apenas para fazer parte do meu portfólio como demonstração de experiência e aprendizado.
 
-__[Demonstração do Projeto]__ (https://jonathancardososales.000webhostapp.com/98movies/usuario/login.php)
+**[Demonstração do Projeto](https://jonathancardososales.000webhostapp.com/98movies/usuario/login.php)** 
 
 ### O que é este projeto?
 
