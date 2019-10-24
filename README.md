@@ -6,11 +6,11 @@ Este é um projeto idealizado para fazer parte do meu portfólio como demonstra�
 É um site cujo o objetivo é demonstrar informações sobre atores e informações técnicas sobre filmes como receita, faturamento, data de lançamento, sinopose, elenco e etc consumindo uma API chamada <b>[The MovieDB](https://www.themoviedb.org/)</b>.
 
 <h3>O que foi utilizado:<h3>
-<ul>
-<li>XAMPP (para usar servidor apache)</li>
-<li>MYSQL Workbench (para modelar o banco de dados)</li>
-<li>Sublime Text (editor de texto)</li>
-</ul>
+
+* [XAMPP (para usar servidor apache)](https://www.apachefriends.org/pt_br/index.html)
+* [MYSQL Workbench (para modelar o banco de dados)](https://www.mysql.com/products/workbench/)
+* [Sublime Text (editor de texto)](https://www.sublimetext.com/)
+
 <hr>
 
 * PHP
