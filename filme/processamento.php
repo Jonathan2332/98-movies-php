@@ -3,7 +3,7 @@
 if(empty($_GET['acao']))
     header('location: ../usuario/inicial.php');
 
-include_once '../api/Api.php';
+include_once '../api/API.php';
 
 $oApi = new API();
 
