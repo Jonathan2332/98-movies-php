@@ -12,18 +12,20 @@ Este é um projeto idealizado para fazer parte do meu portfólio como demonstra�
 <li>Sublime Text (editor de texto)</li>
 </ul>
 <hr>
-<ul>
-  <li>PHP</li>
-  <li>jQuery</li>
-  <li>[jQuery Mask Plugin](https://igorescobar.github.io/jQuery-Mask-Plugin/)</li>
-  <li>[jQuery Mask Money](https://github.com/plentz/jquery-maskmoney)</li>
-  <li>[Bootstrap 4](https://getbootstrap.com/)</li>
-  <li>[Bootstrap Select](https://developer.snapappointments.com/bootstrap-select/)</li>
-  <li>[Fanxybox](http://fancyapps.com/fancybox/3/)</li>
-  <li>[Animate.css](https://daneden.github.io/animate.css/)</li>
-  <li>[SweetAlert2](https://sweetalert2.github.io/)</li>
-  <li>[Font Awesome](https://fontawesome.com/)</li>
-  <li>[SweetAlert Theme](https://github.com/sweetalert2/sweetalert2-themes)</li>
-  <li>[Date Picker](https://bootstrap-datepicker.readthedocs.io/en/latest/)</li>
-  <li>[simplePagination.js](https://flaviusmatis.github.io/simplePagination.js/)</li>
-</ul>
+
+* PHP
+* HTML
+* CSS<
+* Javascript
+* jQuery
+* [jQuery Mask Plugin](https://igorescobar.github.io/jQuery-Mask-Plugin/)
+* [jQuery Mask Money](https://github.com/plentz/jquery-maskmoney)
+* [Bootstrap 4](https://getbootstrap.com/)</li>
+* [Bootstrap Select](https://developer.snapappointments.com/bootstrap-select/)
+* [Fanxybox](http://fancyapps.com/fancybox/3/)
+* [Animate.css](https://daneden.github.io/animate.css/)
+* [SweetAlert2](https://sweetalert2.github.io/)
+* [Font Awesome](https://fontawesome.com/)
+* [SweetAlert Theme](https://github.com/sweetalert2/sweetalert2-themes)
+* [Date Picker](https://bootstrap-datepicker.readthedocs.io/en/latest/)
+* [simplePagination.js](https://flaviusmatis.github.io/simplePagination.js/)
