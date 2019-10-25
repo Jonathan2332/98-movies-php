@@ -25,10 +25,10 @@ Este projeto foi idealizado apenas para fazer parte do meu portfólio como demon
 * [jQuery Mask Money](https://github.com/plentz/jquery-maskmoney)
 * [Bootstrap 4](https://getbootstrap.com/)</li>
 * [Bootstrap Select](https://developer.snapappointments.com/bootstrap-select/)
-* [Fanxybox](http://fancyapps.com/fancybox/3/)
+* [Fancybox](http://fancyapps.com/fancybox/3/)
 * [Animate.css](https://daneden.github.io/animate.css/)
 * [SweetAlert2](https://sweetalert2.github.io/)
-* [Font Awesome](https://fontawesome.com/)
 * [SweetAlert Theme](https://github.com/sweetalert2/sweetalert2-themes)
+* [Font Awesome](https://fontawesome.com/)
 * [Date Picker](https://bootstrap-datepicker.readthedocs.io/en/latest/)
 * [simplePagination.js](https://flaviusmatis.github.io/simplePagination.js/)
