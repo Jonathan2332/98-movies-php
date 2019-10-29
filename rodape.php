@@ -33,7 +33,26 @@ function checkBackground(color)
         navbar.css("background-color", user == 2 ? "red" : "rgb(92,184,92)");
         button.attr("class", "btn btn-outline-light my-2 my-sm-0 dropdown-toggle");
     }
-} 
+}
+
+ function detectmob() { 
+ if(navigator.userAgent.match(/Android/i)
+ || navigator.userAgent.match(/webOS/i)
+ || navigator.userAgent.match(/iPhone/i)
+ || navigator.userAgent.match(/iPod/i)
+ || navigator.userAgent.match(/BlackBerry/i)
+ || navigator.userAgent.match(/Windows Phone/i))
+    return true;
+ else
+    return false;
+}
+
+if(detectmob())
+{
+    if(document.getElementById("logo") != null)
+        document.getElementById("logo").className = "logoMobile";
+}
+
 </script>
 </body>
 </html>

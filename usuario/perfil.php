@@ -149,12 +149,12 @@ else
                 <input type="hidden" type="number" name="idPerfil" id="idPerfil" value="<?php echo $_SESSION['usuario']['idPerfil']; ?>" />
                 <input type="hidden" type="number" name="idEndereco" id="idEndereco" value="<?php echo $_SESSION['usuario']['idEndereco']; ?>" />
 
-                <h1>Detalhes da sua conta</h1>
-                <h3 style="color:rgb(92,184,92);"><span class="fas fa-user"></span> Dados Pessoais</h3>
+                <h2>Detalhes da sua conta</h2>
+                <h4 style="color:rgb(92,184,92);"><span class="fas fa-user"></span> Dados Pessoais</h4>
                 <hr style="background-color: white;">
 
                 <div class="row">
-                  <div class="col-5 col-md-4 col-lg-4 col-xl-3">
+                  <div id="colPhoto" class="col-5 col-md-4 col-lg-4 col-xl-3">
                     <div class="flex-images">
                       <div class="item rounded-circle" data-w="160" data-h="160">
                         <center>
@@ -163,8 +163,8 @@ else
                       </div>
                     </div>
                   </div>
-                  <div class="col-7 col-md-8 col-lg-8 col-xl-9">
-                    <div style="position: absolute; bottom: 0;">
+                  <div id="colUpload" class="col-7 col-md-8 col-lg-8 col-xl-9">
+                    <div id="layoutButtonUpload" style="position: absolute; bottom: 0;">
                       <button type="button" class="btn btn-success btn-lg" id="fotoUpload" onclick="document.getElementById('foto').click();" disabled/><i id="icon-upload" class="fas fa-camera"></i> Carregar Foto</button>
                       <input type="file" id="foto" name="foto" accept="image/png, image/jpeg" hidden>
                       <br>
@@ -176,12 +176,12 @@ else
                 <br>
 
                 <div class="row">
-                  <div class="col">
+                  <div class="col-12 col-sm-6">
 
                       <label for="nome"><b>Nome: </b></label><input type="text" class="form-control" name="nome" id="nome" value="<?php echo $oUsuario->getNome(); ?>" readonly/><br />
 
                   </div>
-                  <div class="col">
+                  <div class="col-12 col-sm-6">
                       <label for="sobrenome"><b>Sobrenome: </b></label><input type="text" class="form-control" name="sobrenome" id="sobrenome" value="<?php echo $oUsuario->getSobrenome(); ?>" readonly/><br />
                   </div>
                 </div>
@@ -189,10 +189,10 @@ else
 
 
                 <div class="row">
-                    <div class="col" id="datepicker">
+                    <div class="col-12 col-sm-6" id="datepicker">
                       <label for="data_nasc"><b>Data de Nascimento: </b></label><input type="text" class="form-control" name="data_nasc" id="data_nasc" maxlength="10" value="<?php echo date('d/m/Y', strtotime($oUsuario->getDataNascimento())); ?>" autocomplete="off" disabled/><br />
                     </div>
-                    <div class="col">
+                    <div class="col-12 col-sm-6">
                       <label for="genero"><b>Sexo: </b></label>
 
                       <select class="form-control selectpicker show-tick" title="Selecione" name="sexo" disabled>
@@ -200,34 +200,36 @@ else
                         <option <?php echo $oUsuario->getGenero() == 'F' ? 'selected' : '' ?> value="F">Feminino</option>
                         <option <?php echo $oUsuario->getGenero() == 'O' ? 'selected' : '' ?> value="O">Outros</option>
                       </select>
+                      <br>
+                      <br>
                   </div>
                 </div>
                 <div class="row">
-                    <div class="col">
+                    <div class="col-12 col-sm-6">
                       <label for="celular"><b>Celular: </b></label><input type="text" class="form-control" name="celular" id="celular" value="<?php echo $oUsuario->getCelular(); ?>" readonly/><br />
                     </div>
-                    <div class="col">
+                    <div class="col-12 col-sm-6">
                       <label for="telefone"><b>Telefone: </b></label><input type="text" class="form-control" name="telefone" id="telefone" value="<?php echo $oUsuario->getTelefone(); ?>" readonly/><br />
                     </div>
                 </div>
                 <div class="row">
-                  <div id="div-email" class="col">
+                  <div id="div-email" class="col-12 col-sm-6">
 
                     <label for="email"><b>Email: </b></label><input type="email" class="form-control" name="email" id="email" value="<?php echo $oUsuario->getEmail(); ?>" readonly/><br />
 
                   </div>
-                  <div class="col">
+                  <div class="col-12 col-sm-6">
                     <label for="senha"><b>Senha: </b></label><input type="password" class="form-control" name="senha" id="senha" value="<?php echo $oUsuario->getSenha(); ?>" readonly><br />
                   </div>
     
-                  <div id="div-csenha" class="col" style="display: none;">
+                  <div id="div-csenha" class="col-12 col-sm-6" style="display: none;">
                     <label for="csenha"><b>Repita a senha: </b></label><input class="form-control" type="password" name="csenha" id="csenha" value="<?php echo $oUsuario->getSenha(); ?>" readonly/><br />
                   </div>
  
                 </div>
 
                 <div class="row">
-                  <div class="<?= $oUsuario->getAge() >= 18 ? 'col-6' : 'col'; ?>">
+                  <div class="<?= $oUsuario->getAge() >= 18 ? 'col-12 col-sm-6' : 'col-12 col-sm-12'; ?>">
 
                     <label for="preferencias"><b>Gêneros Favoritos: </b></label>
                     <select class="selectpicker form-control" id="categoria" name="categoria[]" data-live-search="true" data-header="Selecione ao menos 3 opções!" multiple title="Selecione" disabled>
@@ -247,8 +249,11 @@ else
                         <option value='<?php echo $categoria['id']; ?>' <?php echo $selecionar; ?> ><?php echo $categoria['name']; ?></option>
                     <?php } ?>
                     </select>
+                    <br>
+                    <br>
                   </div>
-                  <div class="col-6" style="<?= $oUsuario->getAge() >= 18 ? 'display: inline-block;' : 'display: none;'; ?>">
+
+                  <div class="col-12 col-sm-6" style="<?= $oUsuario->getAge() >= 18 ? 'display: inline-block;' : 'display: none;'; ?>">
                       <label for="preferencias"><b>Conteúdo Adulto: </b></label>
                       <select class="form-control selectpicker show-tick" title="Selecione" name="cont_adulto" id="cont_adulto" disabled>
                         <option <?php echo $oUsuario->getConteudoAdulto() == true ? 'selected' : '' ?> value="true">Exibir</option>
@@ -258,13 +263,12 @@ else
                 </div>
 
                 <br />
-                <!-- <br /> -->
 
-                <h3 style="color:rgb(92,184,92);"><span class="fas fa-map-marker-alt"></span> Endereço</h3>
+                <h4 style="color:rgb(92,184,92);"><span class="fas fa-map-marker-alt"></span> Endereço</h4>
                 <hr style="background-color: white;">
 
                 <div class="row">
-                  <div class="col">
+                  <div class="col-12 col-sm-6">
 
                     <label for="cep"><b>CEP: </b></label>
 
@@ -278,7 +282,7 @@ else
                     <br>
                     <label for="localidade"><b>Cidade: </b></label><input type="text" class="form-control" name="localidade" id="localidade" value="<?php echo $oEndereco->getLocalidade(); ?>" readonly><br />
                   </div>
-                  <div class="col">
+                  <div class="col-12 col-sm-6">
                     <label for="uf"><b>Estado: </b></label><input type="text" class="form-control" name="uf" id="uf" value="<?php echo $oEndereco->getUf(); ?>" readonly><br />
 
                     <label for="bairro"><b>Bairro: </b></label><input type="text" class="form-control" name="bairro" id="bairro" value="<?php echo $oEndereco->getBairro(); ?>" readonly><br />
@@ -305,6 +309,10 @@ else
   </div>
 
 </div>
+
+<?php
+include_once '../rodape.php';
+?>
 <script type="text/javascript">
 
 var uploadField = document.getElementById("foto");
@@ -362,8 +370,6 @@ uploadField.onchange = function()
 
     img.src = objectURL;
 };
-
-new flexImages({selector: '.flex-images', rowHeight: 250, truncate: false });
 
 document.getElementsByTagName("BODY")[0].onresize = function() {checkSelect()};
 
@@ -460,7 +466,7 @@ function toggleEdit(condition)
         $("#button-states").hide();
         $("#button-cep").hide();
 
-        $("#div-email").attr('class', 'col');
+        $("#div-email").attr('class', 'col-12 col-sm-6');
         $("#div-csenha").hide(); 
     }
 }
@@ -680,7 +686,14 @@ $('#datepicker input').datepicker({
     autoclose: true
 });
 
+if(detectmob())
+{
+    $('#colPhoto').attr('class', 'col-12 col-sm-5 col-md-4 col-lg-4 col-xl-3');
+    $('#colUpload').attr('class', 'col-12 col-sm-7 col-md-8 col-lg-8 col-xl-9');
+    $('#layoutButtonUpload').attr('style', 'margin-top: 20px;');
+
+}
+
+new flexImages({selector: '.flex-images', rowHeight: 250, truncate: false });
+
 </script>
-<?php
-include_once '../rodape.php';
-?>

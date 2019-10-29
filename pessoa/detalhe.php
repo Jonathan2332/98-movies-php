@@ -412,6 +412,81 @@ function loadWorks(id)
             element.css('opacity', 1);
             element.css('pointer-events', 'auto');
             loader.setAttribute('style', 'display:none !important');
+
+            if(detectmob())
+            {
+                if($('#itens-atuacao') != null)
+                {
+                    $('#itens-atuacao').attr('class', 'table table-sm table-hover table-dark');
+                    $('#itens-atuacao th').each(function () 
+                    {
+                        if($(this).attr("id") == 'rate')
+                        {
+                            $(this).attr('class', 'col-2 text-center');
+                        }
+                        else if($(this).hasClass("text-center"))
+                        {
+                            $(this).attr('class', 'col-3 text-center');
+                        }
+                        else
+                        {
+                            $(this).attr('class', 'col-7');
+                        }
+                    });
+
+                    $('#itens-atuacao td').each(function () 
+                    {
+                        if($(this).attr("id") == 'rate')
+                        {
+                            $(this).attr('class', 'col-2 text-center');
+                        }
+                        else if($(this).hasClass("text-center"))
+                        {
+                            $(this).attr('class', 'col-3 text-center');
+                        }
+                        else
+                        {
+                            $(this).attr('class', 'col-7');
+                        }
+                    });
+                }
+                if($('#itens-outros') != null)
+                {
+                    $('#itens-outros').attr('class', 'table table-sm table-hover table-dark');
+                    $('#itens-outros th').each(function () 
+                    {
+                        if($(this).attr("id") == 'rate')
+                        {
+                            $(this).attr('class', 'col-2 text-center');
+                        }
+                        else if($(this).hasClass("text-center"))
+                        {
+                            $(this).attr('class', 'col-3 text-center');
+                        }
+                        else
+                        {
+                            $(this).attr('class', 'col-7');
+                        }
+                    });
+
+                    $('#itens-outros td').each(function () 
+                    {
+                        if($(this).attr("id") == 'rate')
+                        {
+                            $(this).attr('class', 'col-2 text-center');
+                        }
+                        else if($(this).hasClass("text-center"))
+                        {
+                            $(this).attr('class', 'col-3 text-center');
+                        }
+                        else
+                        {
+                            $(this).attr('class', 'col-7');
+                        }
+                    });
+                }
+               
+            }
             
         }
         if (textStatus == "error") {

@@ -15,6 +15,7 @@
 <head>
 	<title>98 Movies</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <link rel="shortcut icon" href="../res/imgs/98-movies.ico" type="image/x-icon"/>
 
@@ -57,6 +58,12 @@
       padding-top: 20px; 
       width: 35%;
       min-width: 500px;
+  }
+  .logoMobile
+  {
+      padding-top: 20px; 
+      width: 35%;
+      min-width: 320px;
   }
   .custom-navbar
   {

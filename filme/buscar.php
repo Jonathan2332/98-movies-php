@@ -251,7 +251,7 @@ function initPagination(busca, tipo, cont_adulto)
     $('#custom-pagination').pagination({
         items: document.getElementById("total-items").value,
         itemsOnPage: document.getElementById("items-page").value,
-        displayedPages: 5,
+        displayedPages: detectmob() ? 4 : 5,
         ellipsePageSet: false,
         edges: 1,
         prevText: '',

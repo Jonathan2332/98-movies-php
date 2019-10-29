@@ -34,7 +34,7 @@ function checkPermissao($permissoes, $idPerfil)
   .painel
   {
       color:white!important;
-      font-size: 40px;
+      font-size: 30px;
       background-color: red!important;
       border-color: white!important;
   }

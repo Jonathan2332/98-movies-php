@@ -12,7 +12,7 @@ $categorias = $_SESSION["usuario"]["categorias"];
 <style type="text/css">
   .titulo
   {
-      font-size: 40px;
+      font-size: 30px;
       background-color: red!important;
       color: white!important;
       border-color:white!important;
@@ -112,8 +112,7 @@ $categorias = $_SESSION["usuario"]["categorias"];
                 <br>
               
             
-          <form>
-          <div class="form-group">
+          <div class="table-responsive">
 
             <table id="itens" class="table table-bordered table-striped table-hover">
                   <thead>
@@ -146,7 +145,6 @@ $categorias = $_SESSION["usuario"]["categorias"];
               </table>
               </div>
                 
-            </form>
            </div>
         </div>
 </div>

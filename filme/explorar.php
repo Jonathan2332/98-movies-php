@@ -117,7 +117,7 @@ $cont_adulto = $_SESSION['usuario']['cont_adulto'];
       </div>
     </nav>
 	<!-- ////////////////////////////////////CONTAINER/////////////////////////////////////// -->
-	<div class="container">
+	<div id="layout" class="container">
 		<div class="form-group">
 			<div class="card painel-bg">
 				<div class="card-body">
@@ -139,7 +139,7 @@ $cont_adulto = $_SESSION['usuario']['cont_adulto'];
 								</div>
 								<div class="col-4">
 									<div class="form-group">
-										<label style="color: white">Ordernar por</label><br>
+										<label style="color: white">Ver por</label><br>
 										<select id="sort_by" class="selectpicker show-tick form-control" data-style="btn-success">
 											<option value="popularity.desc">Popularidade (maior)</option>
 											<option value="popularity.asc">Popularidade (menor)</option>
@@ -185,6 +185,10 @@ $cont_adulto = $_SESSION['usuario']['cont_adulto'];
 			</div><!-- FECHANDO PRIMARY PANEL -->
 	</div><!-- FECHANDO FORM GROUP -->
 </div>
+
+<?php
+	include_once '../rodape.php';
+?>
 <script>
 
 var ano = $("#ano");
@@ -217,7 +221,7 @@ function getCategorias()
 
 document.getElementsByTagName("BODY")[0].onresize = function() 
 {
-	new flexImages({selector: '.overlay', rowHeight: 400, truncate: false });
+	new flexImages({selector: '.overlay', rowHeight: detectmob() ? 450 : 350, truncate: false });
 	checkSelect();
 };
 
@@ -282,7 +286,7 @@ function updateList(condition)
 
 	if(condition)//show
 	{
-		new flexImages({selector: '.overlay', rowHeight: 350, truncate: false });
+		new flexImages({selector: '.overlay', rowHeight: detectmob() ? 450 : 350, truncate: false });
 
 		var loaderImage = $('.loader-image');
      	loaderImage.each(function(i, elem)
@@ -349,7 +353,7 @@ function initPagination(cont_adulto, ano, sort_by, categorias)
 	$('#custom-pagination').pagination({
         items: document.getElementById("total-items").value,
         itemsOnPage: document.getElementById("items-page").value,
-        displayedPages: 5,
+        displayedPages: detectmob() ? 4 : 5,
         ellipsePageSet: false,
         edges: 1,
         prevText: '',
@@ -362,8 +366,7 @@ function initPagination(cont_adulto, ano, sort_by, categorias)
     }); 
 }
 
-</script>
+if(detectmob())
+	document.getElementById("layout").classList.remove("container");
 
-<?php
-	include_once '../rodape.php';
-?>
+</script>

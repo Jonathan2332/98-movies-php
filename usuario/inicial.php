@@ -225,7 +225,7 @@ function getCategoriaName($id)
 
 document.getElementsByTagName("BODY")[0].onresize = function() 
 {
-	new flexImages({selector: '.overlay', rowHeight: 400, truncate: false });
+	new flexImages({selector: '.overlay', rowHeight: detectmob() ? 450 : 400, truncate: false });
 };
 
 var type = '<?= $type; ?>';
@@ -293,7 +293,7 @@ function updateList(condition, based, idCat)
 
 		if(condition)//show
 		{
-			new flexImages({selector: '.overlay', rowHeight: 400, truncate: false });
+			new flexImages({selector: '.overlay', rowHeight: detectmob() ? 450 : 400, truncate: false });
 
 			var loaderImage = $('.loader-image');
 	     	loaderImage.each(function(i, elem)
@@ -328,7 +328,7 @@ function updateList(condition, based, idCat)
 
 		if(condition)//show
 		{
-			new flexImages({selector: '.overlay', rowHeight: 400, truncate: false });
+			new flexImages({selector: '.overlay', rowHeight: detectmob() ? 450 : 400, truncate: false });
 
 			var loaderImage = $('.loader-image');
 	     	loaderImage.each(function(i, elem)
@@ -402,7 +402,7 @@ function initPagination(tipo, based, cont_adulto, idCat)
 		$('#custom-pagination-'+idCat).pagination({
 	        items: document.getElementById("total-items-"+idCat).value,
 	        itemsOnPage: document.getElementById("items-page-"+idCat).value,
-	        displayedPages: 5,
+	        displayedPages: detectmob() ? 4 : 5,
 	        ellipsePageSet: false,
 	        edges: 1,
 	        prevText: '',
@@ -419,7 +419,7 @@ function initPagination(tipo, based, cont_adulto, idCat)
 		$('#custom-pagination').pagination({
 	        items: document.getElementById("total-items").value,
 	        itemsOnPage: document.getElementById("items-page").value,
-	        displayedPages: 5,
+	        displayedPages: detectmob() ? 4 : 5,
 	        ellipsePageSet: false,
 	        edges: 1,
 	        prevText: '',

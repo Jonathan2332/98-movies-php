@@ -10,18 +10,25 @@
       background-color: rgb(92,184,92)!important;
       border-color:black!important;
   }
+  .loginMobile
+  {
+      color:white!important;
+      font-size: 20px;
+      background-color: rgb(92,184,92)!important;
+      border-color:black!important;
+  }
   body
   {
       background-image: url(../res/imgs/fundo.jpg);
   }
 </style>
 
-<center><img class="logo" src="../res/imgs/98-movies-logo.png"></center>
+<center><img id="logo" class="logo" src="../res/imgs/98-movies-logo.png"></center>
 
-<div class="container" style="margin-top: 70px; max-width: 600px;">
+<div id="painel" class="container" style="margin-top: 70px; max-width: 600px;">
 
   <div class="card" style="border: none">
-    <div class="card-header login">Entrar</div>
+    <div id="header" class="card-header login">Entrar</div>
     <div class="card-body">
 
       <form class="form-horizontal" action="processamento.php?acao=logar" method="post">
@@ -60,8 +67,28 @@
 
 </body>
 </html>
+<script type="text/javascript">
+  
+ function detectmob() { 
+ if(navigator.userAgent.match(/Android/i)
+ || navigator.userAgent.match(/webOS/i)
+ || navigator.userAgent.match(/iPhone/i)
+ || navigator.userAgent.match(/iPod/i)
+ || navigator.userAgent.match(/BlackBerry/i)
+ || navigator.userAgent.match(/Windows Phone/i))
+    return true;
+ else
+    return false;
+}
 
+if(detectmob())
+{
+    document.getElementById("logo").className = "logoMobile";
+    document.getElementById("header").className = "card-header loginMobile";
+    document.getElementById("painel").style.marginTop = "30px";
+}
 
+</script>
 
 
 

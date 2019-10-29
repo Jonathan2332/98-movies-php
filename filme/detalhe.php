@@ -203,10 +203,10 @@ $valueInteresse = empty($oInteresse->verificarFilme($id, $_SESSION["usuario"]["i
                                 <i class="fas fa-film"></i>
                                 <?php foreach($filme['genres'] as $index=>$genre) { ?>
                                     <?php if($index == 0) { ?>
-                                        <a class="media" style="display: inline;" href="../categoria/filtrar.php?idCat=<?= $genre['id']; ?>&nome=<?= $genre['name']; ?>" >
+                                        <a class="media" style="display: inline;" href="../categoria/filtrar.php?id=<?= $genre['id']; ?>&nome=<?= $genre['name']; ?>" >
                                             <?php echo $genre['name']; ?></a>
                                     <?php } else { ?>
-                                        | <a class="media" style="display: inline;" href="../categoria/filtrar.php?idCat=<?= $genre['id']; ?>&nome=<?= $genre['name']; ?>" >
+                                        | <a class="media" style="display: inline;" href="../categoria/filtrar.php?id=<?= $genre['id']; ?>&nome=<?= $genre['name']; ?>" >
                                             <?= $genre['name']; ?></a>
                                     <?php } ?>
                                 <?php } ?>
@@ -615,7 +615,7 @@ function loadCredits(id, tipo)
         function (responseText, textStatus, XMLHttpRequest) {
         if (textStatus == "success") 
         {
-            new flexImages({selector: '.'+tipo, rowHeight: 250, truncate: 0 });
+            new flexImages({selector: '.'+tipo, rowHeight: detectmob() ? 350 : 250, truncate: 0 });
 
             element.css('opacity', 1);
             element.css('pointer-events', 'auto');

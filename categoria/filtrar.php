@@ -241,7 +241,7 @@ function initPagination(idCat, tipo)
     $('#custom-pagination').pagination({
         items: document.getElementById("total-items").value,
         itemsOnPage: document.getElementById("items-page").value,
-        displayedPages: 5,
+        displayedPages: detectmob() ? 4 : 5,
         ellipsePageSet: false,
         edges: 1,
         prevText: '',

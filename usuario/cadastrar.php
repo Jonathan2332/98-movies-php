@@ -16,14 +16,21 @@ $categorias = $oApi->getCategorias();
       background-color: rgb(92,184,92)!important;
       border-color: white!important;
   }
+  .cadastroMobile
+  {
+      color:white!important;
+      font-size: 25px;
+      background-color: rgb(92,184,92)!important;
+      border-color: white!important;
+  }
 
 </style>
-<center style="background-image: linear-gradient(rgb(92,184,92), #fff); "><img class="logo" src="../res/imgs/98-movies-logo.png"></center>
+<center style="background-image: linear-gradient(rgb(92,184,92), #fff); "><img id="logo" class="logo" src="../res/imgs/98-movies-logo.png"></center>
 
   <div class="container" style="margin-top: 40px;">
 
     <div class="card" style="border-color: green;">
-      <div class="card-header cadastro">Cadastro</div>
+      <div id="header" class="card-header cadastro">Cadastro</div>
           <div class="card-body">
             
           <form action="processamento.php?acao=salvar&cadastro=true" method="post">
@@ -31,23 +38,23 @@ $categorias = $oApi->getCategorias();
             <input type="hidden" type="number" name="cont_adulto" id="cont_adulto" value="false" />
             <div class="form-group">
 
-              <label style="font-size: 25px; color:green; "><span class="fas fa-user"></span> Dados Pessoais</label><br />
+              <label style="font-size: 20px; color:green; "><span class="fas fa-user"></span> Dados Pessoais</label><br />
               
               <label>Por favor, insira seus dados abaixo para realizar seu cadastro.</label><br /><br />
               <div class="row">
-                <div class="col">
+                <div class="col-12 col-sm-6">
                   <label for="nome">Nome: </label><input type="text" class="form-control" name="nome" id="nome" required/><br />
                 </div>
-                <div class="col">
+                <div class="col-12 col-sm-6">
                   <label for="sobrenome">Sobrenome: </label><input type="text" class="form-control" name="sobrenome" id="sobrenome" required/><br />
                 </div>
               </div>
 
               <div class="row">
-                <div class="col" id="datepicker">
+                <div class="col-12 col-sm-6" id="datepicker">
                   <label for="data_nasc">Data de Nascimento: </label><input type="text" class="form-control" name="data_nasc" id="data_nasc" maxlength="10" autocomplete="off" required/><br />
                 </div>
-                <div class="col">
+                <div class="col-12 col-sm-6">
                   <label for="genero">Sexo: </label>
                   <select class="form-control selectpicker show-tick" title="Selecione" name="sexo" required>
                     <option value="M">Masculino</option>
@@ -56,12 +63,14 @@ $categorias = $oApi->getCategorias();
                   </select>
                 </div>
               </div>
+
+              <br />
               
               <div class="row">
-                <div class="col">
+                <div class="col-12 col-sm-6">
                   <label for="celular">Celular: </label><input type="text" class="form-control" name="celular" id="celular" required/><br />
                 </div>
-                <div class="col">
+                <div class="col-12 col-sm-6">
                   <label for="telefone">Telefone: </label><input type="text" class="form-control" name="telefone" id="telefone" required/><br />
                 </div>
               </div>
@@ -69,10 +78,10 @@ $categorias = $oApi->getCategorias();
               <label for="email">Email: </label><input type="email" class="form-control" name="email" id="email" required/><br />
 
               <div class="row">
-                <div class="col">
+                <div class="col-12 col-sm-6">
                   <label for="senha">Senha: </label><input type="password" class="form-control" name="senha" id="senha" /><br required/>
                 </div>
-                <div class="col">
+                <div class="col-12 col-sm-6">
                   <label for="csenha">Repita a senha: </label><input class="form-control" type="password" name="csenha" id="csenha" required/><br />
                 </div>
               </div>
@@ -89,10 +98,10 @@ $categorias = $oApi->getCategorias();
               <br />
               <br />
 
-              <label style="font-size: 25px; color:green"><span class="fas fa-map-marker-alt"></span> Endereço</label><br />
+              <label style="font-size: 20px; color:green"><span class="fas fa-map-marker-alt"></span> Endereço</label><br />
               <label>Por favor, insira os dados do seu endereço.</label><br><br>
               <div class="row">
-                <div class="col">
+                <div class="col-12 col-sm-6">
 
                   <label for="cep">CEP: </label>
                     <div class="input-group">
@@ -105,7 +114,7 @@ $categorias = $oApi->getCategorias();
 
                   <label for="localidade">Cidade: </label><input class="form-control" type="text" name="localidade" id="localidade" required/><br />
                 </div>
-                <div class="col">
+                <div class="col-12 col-sm-6">
                   <label for="uf">Estado: </label><input class="form-control" type="text" name="uf" id="uf" required/><br />
 
                   <label for="bairro">Bairro: </label><input class="form-control" type="text" name="bairro" id="bairro" required/><br />
@@ -310,3 +319,25 @@ $('#datepicker input').datepicker({
 
 </body>
 </html>
+
+<script type="text/javascript">
+  
+ function detectmob() { 
+ if(navigator.userAgent.match(/Android/i)
+ || navigator.userAgent.match(/webOS/i)
+ || navigator.userAgent.match(/iPhone/i)
+ || navigator.userAgent.match(/iPod/i)
+ || navigator.userAgent.match(/BlackBerry/i)
+ || navigator.userAgent.match(/Windows Phone/i))
+    return true;
+ else
+    return false;
+}
+
+if(detectmob())
+{
+    document.getElementById("logo").className = "logoMobile";
+    document.getElementById("header").className = "card-header cadastroMobile";
+}
+
+</script>

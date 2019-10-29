@@ -149,7 +149,7 @@ $categorias = $_SESSION['usuario']['categorias'];
 
 document.getElementsByTagName("BODY")[0].onresize = function() 
 {
-	new flexImages({selector: '.overlay', rowHeight: 400, truncate: false });
+	new flexImages({selector: '.overlay', rowHeight: detectmob() ? 450 : 400, truncate: false });
 };
 
 carregarPessoas(1, true);
@@ -206,7 +206,7 @@ function updateList(condition)
 
 	if(condition)//show
 	{
-		new flexImages({selector: '.overlay', rowHeight: 400, truncate: false });
+		  new flexImages({selector: '.overlay', rowHeight: detectmob() ? 450 : 400, truncate: false });
 
 		  var loaderImage = $('.loader-image');
      	loaderImage.each(function(i, elem)
@@ -216,20 +216,20 @@ function updateList(condition)
   			});
 	    });
 
-		element.css('opacity', 1);
-		element.css('pointer-events', 'auto');
-	 	loader.setAttribute('style', 'display:none !important');
+  		element.css('opacity', 1);
+  		element.css('pointer-events', 'auto');
+  	 	loader.setAttribute('style', 'display:none !important');
 
-	 	pages.setAttribute('style', 'display:inline-block !important');
+  	 	pages.setAttribute('style', 'display:inline-block !important');
 
 	}
 	else//hide
 	{
-		element.css('pointer-events', 'none');
+		  element.css('pointer-events', 'none');
 	    element.css('opacity', 0);
 
 	    pages.setAttribute('style', 'display:none !important');
-		loader.setAttribute('style', 'display:inline-block !important');
+		  loader.setAttribute('style', 'display:inline-block !important');
 	}
 }
 function carregarPessoas(pagina, initializing)
@@ -238,7 +238,8 @@ function carregarPessoas(pagina, initializing)
 
 	var element = $('#lista');
 	element.load('processamento.php?acao=carregar-pessoas-populares&page=' + pagina,
-		function (responseText, textStatus, XMLHttpRequest) {
+		function (responseText, textStatus, XMLHttpRequest) 
+    {
 	    if (textStatus == "success") 
 	    {
          	updateList(true);
@@ -257,7 +258,7 @@ function initPagination()
 	$('#custom-pagination').pagination({
         items: document.getElementById("total-items").value,
         itemsOnPage: document.getElementById("items-page").value,
-        displayedPages: 5,
+        displayedPages: detectmob() ? 4 : 5,
         ellipsePageSet: false,
         edges: 1,
         prevText: '',

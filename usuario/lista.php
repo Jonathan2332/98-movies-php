@@ -97,29 +97,25 @@ $categorias = $_SESSION["usuario"]["categorias"];
 
 <div class="container" style="margin-top: 40px;">
   <div class="card" style="border-color: <?= $type == 'favoritos' ? 'red' : '#007bff' ?>;">
-    <div class="card-header" style="font-size: 40px; color:white!important; background-color: <?= $type == 'favoritos' ? 'red' : '#007bff' ?>!important; border-color: white!important;">
+    <div class="card-header" style="font-size: 30px; color:white!important; background-color: <?= $type == 'favoritos' ? 'red' : '#007bff' ?>!important; border-color: white!important;">
       <span class="fas fa-<?= $type == 'favoritos' ? 'heart' : 'bookmark' ?>" aria-hidden="true"></span> Lista de <?= $type; ?></div>
       <div class="card-body">
-        <form>
-          <div class="form-group">
-            <table id="itens" class="table table-hover">
-              <thead class="thead-dark">
-                <tr class="d-flex">
-                  <th class="col-2 col-sm-2 col-md-2 col-lg-1 text-center">Ações</th>
-                  <th class="col-6 col-sm-6 col-md-6 col-lg-9">Filme</th>
-                  <th class="col-2 col-sm-2 col-md-2 col-lg-1 text-center">Ano</th>
-                  <th class="col-2 col-sm-2 col-md-2 col-lg-1 text-center"><span class="fas fa-star"></span></th>
-              </tr>
-              </thead>
-              <tbody id="table-<?= $type ?>">
-              
-              </tbody>
-            </table>
-            <div class="d-flex justify-content-center">
-                  <div id="loader" class="spinner-border <?= $type == 'favoritos' ? 'text-danger' : 'text-primary' ?>" role="status" style="display: none!important"></div>
-            </div>       
-          </div>
-        </form>
+          <table id="itens" class="table table-hover">
+            <thead class="thead-dark">
+              <tr class="d-flex">
+                <th class="col-2 col-sm-2 col-md-2 col-lg-1 text-center">Ações</th>
+                <th class="col-6 col-sm-6 col-md-6 col-lg-9">Filme</th>
+                <th class="col-2 col-sm-2 col-md-2 col-lg-1 text-center">Ano</th>
+                <th id="rate" class="col-2 col-sm-2 col-md-2 col-lg-1 text-center"><span class="fas fa-star"></span></th>
+            </tr>
+            </thead>
+            <tbody id="table-<?= $type ?>">
+            
+            </tbody>
+          </table>
+          <div class="d-flex justify-content-center">
+                <div id="loader" class="spinner-border <?= $type == 'favoritos' ? 'text-danger' : 'text-primary' ?>" role="status" style="display: none!important"></div>
+          </div>       
       </div>
   </div>
 </div><!-- Fechando a Classe Container -->
@@ -140,6 +136,42 @@ function carregarLista()
         if (textStatus == "success") 
         {
             loader.setAttribute('style', 'display:none !important');
+            if(detectmob())
+            {
+                $('#itens').attr('class', 'table table-sm table-hover');
+                $('#itens th').each(function () 
+                {
+                    if($(this).attr("id") == 'rate')
+                    {
+                        $(this).attr('class', 'col-2 text-center');
+                    }
+                    else if($(this).hasClass("text-center"))
+                    {
+                        $(this).attr('class', 'col-3 text-center');
+                    }
+                    else
+                    {
+                        $(this).attr('class', 'col-4');
+                    }
+                });
+
+                $('#itens td').each(function () 
+                {
+                    if($(this).attr("id") == 'rate')
+                    {
+                        $(this).attr('class', 'col-2 text-center');
+                    }
+                    else if($(this).hasClass("text-center"))
+                    {
+                        $(this).attr('class', 'col-3 text-center');
+                    }
+                    else
+                    {
+                        $(this).attr('class', 'col-4');
+                    }
+                });
+            }
+            
         }
         if (textStatus == "error") {
              // oh noes!

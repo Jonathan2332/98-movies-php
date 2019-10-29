@@ -13,7 +13,7 @@ $categorias = $_SESSION["usuario"]["categorias"];
   .painel
   {
       color:white!important;
-      font-size: 40px;
+      font-size: 30px;
       background-color: red!important;
       border-color: white!important;
   }
@@ -102,8 +102,7 @@ $categorias = $_SESSION["usuario"]["categorias"];
   <div class="card" style="border-color: red;">
     <div class="card-header painel"><span class="fas fa-users" aria-hidden="true"></span> Gerenciar Usuários</div>
       <div class="card-body">
-        <form>
-          <div class="form-group">
+          <div class="table-responsive">
             <table class="table table-bordered table-striped table-hover">
               <thead>
                 <tr>
@@ -128,7 +127,6 @@ $categorias = $_SESSION["usuario"]["categorias"];
               </tbody>
             </table>            
           </div>
-        </form>
       </div>
   </div>
 </div><!-- Fechando a Classe Container -->

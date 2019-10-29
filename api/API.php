@@ -459,12 +459,12 @@ class API{
 		{
 			echo '<h4 style="color: white;"><span class="fas fa-video"></span> Atuação</h4>
 				<hr style="background-color: white" />';
-			echo '<table id="itens" class="table table-hover table-dark">
+			echo '<table id="itens-atuacao" class="table table-hover table-dark">
 	                <thead class="thead-dark">
 	                  <tr class="d-flex">
 	                    <th class="col-2 col-sm-2 col-md-2 col-lg-2 text-center">Ano</th>
 	                    <th class="col-8 col-sm-8 col-md-8 col-lg-9">Filme</th>
-	                    <th class="col-2 col-sm-2 col-md-2 col-lg-1 text-center"><span class="fas fa-star"></span></th>
+	                    <th id="rate" class="col-2 col-sm-2 col-md-2 col-lg-1 text-center"><span class="fas fa-star"></span></th>
 	                </tr>
 	                </thead>
 	                <tbody>';
@@ -489,7 +489,7 @@ class API{
 			                ' . $title . ' <div style="font-weight: normal; display: inline;">como </div>' . '<div style="color: rgb(92,184,92); font-weight: normal; display: inline;">' . $character .'
 			                </div></a>
 			          </td>
-			          <td class="col-2 col-sm-2 col-md-2 col-lg-1 text-center">
+			          <td id="rate" class="col-2 col-sm-2 col-md-2 col-lg-1 text-center">
 			                ' . $vote_average .'
 			          </td>
 			        </tr>';
@@ -505,7 +505,7 @@ class API{
 			                ' . $title . '
 			                </div></a>
 			          </td>
-			          <td class="col-2 col-sm-2 col-md-2 col-lg-1 text-center">
+			          <td id="rate" class="col-2 col-sm-2 col-md-2 col-lg-1 text-center">
 			                ' . $vote_average .'
 			          </td>
 			        </tr>';
@@ -523,12 +523,12 @@ class API{
 
 	      	echo '<h4 style="color: white;"><span class="fas fa-briefcase"></span> ' . $title . '</h4>
 					<hr style="background-color: white" />';
-			echo '<table id="itens" class="table table-hover table-dark">
+			echo '<table id="itens-outros" class="table table-hover table-dark">
 	                <thead class="thead-dark">
 	                  <tr class="d-flex">
 	                    <th class="col-2 col-sm-2 col-md-2 col-lg-2 text-center">Ano</th>
 	                    <th class="col-8 col-sm-8 col-md-8 col-lg-9">Filme</th>
-	                    <th class="col-2 col-sm-2 col-md-2 col-lg-1 text-center"><span class="fas fa-star"></span></th>
+	                    <th id="rate" class="col-2 col-sm-2 col-md-2 col-lg-1 text-center"><span class="fas fa-star"></span></th>
 	                </tr>
 	                </thead>
 	                <tbody>';
@@ -552,7 +552,7 @@ class API{
 			                ' . $title . ' <div style="font-weight: normal; display: inline;">como </div>' . '<div style="color: rgb(92,184,92); font-weight: normal; display: inline;">' . $job .'
 			                </div></a>
 			          </td>
-			          <td class="col-2 col-sm-2 col-md-2 col-lg-1 text-center">
+			          <td id="rate" class="col-2 col-sm-2 col-md-2 col-lg-1 text-center">
 			                ' . $vote_average .'
 			          </td>
 			        </tr>';
@@ -568,7 +568,7 @@ class API{
 			                ' . $title . '
 			                </div></a>
 			          </td>
-			          <td class="col-2 col-sm-2 col-md-2 col-lg-1 text-center">
+			          <td id="rate" class="col-2 col-sm-2 col-md-2 col-lg-1 text-center">
 			                ' . $vote_average .'
 			          </td>
 			        </tr>';
@@ -1155,7 +1155,7 @@ class API{
               <td class="col-2 col-sm-2 col-md-2 col-lg-1 text-center">
                     ' . date('Y', strtotime($movie['release_date'])) .'
               </td>
-              <td class="col-2 col-sm-2 col-md-2 col-lg-1 text-center">
+              <td id="rate" class="col-2 col-sm-2 col-md-2 col-lg-1 text-center">
                     ' . $movie['vote_average'] .'
               </td>
             </tr>';
@@ -1204,7 +1204,7 @@ class API{
               <td class="col-2 col-sm-2 col-md-2 col-lg-1 text-center">
                     ' . date('Y', strtotime($movie['release_date'])) .'
               </td>
-              <td class="col-2 col-sm-2 col-md-2 col-lg-1 text-center">
+              <td id="rate" class="col-2 col-sm-2 col-md-2 col-lg-1 text-center">
                     ' . $movie['vote_average'] .'
               </td>
             </tr>';

@@ -124,6 +124,7 @@ $status = $resultado ? 1 : 0;
 
 	<title>98 Movies</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   	<link rel="shortcut icon" href="../res/imgs/98-movies.ico" type="image/x-icon"/>
 	<link type="text/css" rel="stylesheet" href="../../js/bootstrap/css/bootstrap.css">
