@@ -61,7 +61,7 @@ if(!empty($_GET['idUsuario'])){
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <span class="fas fa-bars" aria-hidden="true"></span> Categorias
         </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <div id="nav-cat" class="dropdown-menu" aria-labelledby="navbarDropdown">
           
               <?php foreach($categorias as $index=>$categoria){ ?>
                 <form class="form-inline my-2 my-lg-0 " action="../categoria/filtrar.php" method="get">

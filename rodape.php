@@ -51,6 +51,9 @@ if(detectmob())
 {
     if(document.getElementById("logo") != null)
         document.getElementById("logo").className = "logoMobile";
+
+    if(document.getElementById("nav-cat") != null)
+        document.getElementById("nav-cat").className = "dropdown-menu menu-mobile";
 }
 
 </script>

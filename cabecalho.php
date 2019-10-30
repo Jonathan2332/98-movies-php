@@ -33,7 +33,6 @@
 	<script type="text/javascript" src="../../js/jquery-2.1.4.js"></script>
 	<script type="text/javascript" src="../../js/jquery.maskedinput.min.js"></script>
   <script type="text/javascript" src="../../js/jquery.maskMoney.min.js"></script>
-	<!-- <script type="text/javascript" src="../../js/bootstrap/js/bootstrap.min.js"></script> -->
   <script type="text/javascript" src="../../js/bootstrap/js/bootstrap.bundle.min.js"></script>
 	<script src="../../js/bootstrap-select/dist/js/bootstrap-select.js"></script>
 	<script src="../../js/fleximages/flex-images.js"></script>
@@ -44,7 +43,6 @@
   <script src="../../js/simplePagination/jquery.simplePagination.js"></script>
 
 
-
 </head>
 
 <style type="text/css">
@@ -52,6 +50,10 @@
   {
       font-family: FilmLetters;
       src: url('../res/FilmLetters.ttf');
+  }
+  .menu-mobile {         
+    max-height: 200px;
+    overflow-y: auto;
   }
   .logo
   {

@@ -63,30 +63,6 @@ switch ($person['gender']) {
     a.media:active {
       color: rgb(92,184,92);
     }
-    .equipe-tecnica .over 
-    { 
-        position: absolute; 
-        bottom: 0; 
-        left: 0; 
-        right: 0; 
-        padding: 4px 6px; 
-        font-size: 13px; 
-        color: #fff; 
-        background: #222; 
-        background: rgba(0,0,0,.7); 
-    }
-    .elenco .over 
-    { 
-        position: absolute; 
-        bottom: 0; 
-        left: 0; 
-        right: 0; 
-        padding: 4px 6px; 
-        font-size: 13px; 
-        color: #fff; 
-        background: #222; 
-        background: rgba(0,0,0,.7); 
-    }
     .fade-list {
         opacity: 0;
         -webkit-transition: all 0.5s ease-in-out;
@@ -94,15 +70,6 @@ switch ($person['gender']) {
         -ms-transition: all 0.5s ease-in-out;
         -o-transition: all 0.5s ease-in-out;
         transition: all 0.5s ease-in-out;
-    }
-    .itens{
-         display: none;
-    }
-    .fa-chevron-left:active {
-       color: rgb(92,184,92)!important;
-    }
-    .fa-chevron-right:active {
-       color: rgb(92,184,92)!important;
     }
     h2
     {
@@ -141,7 +108,7 @@ switch ($person['gender']) {
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <span class="fas fa-bars" aria-hidden="true"></span> Categorias
             </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <div id="nav-cat" class="dropdown-menu" aria-labelledby="navbarDropdown">
               
                 <?php foreach($categorias as $index=>$categoria){ ?>
                     <form class="form-inline my-2 my-lg-0 " action="../categoria/filtrar.php" method="get">
