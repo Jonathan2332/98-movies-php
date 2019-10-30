@@ -16,6 +16,7 @@ Este projeto foi idealizado apenas para fazer parte do meu portfólio como demon
 <hr>
 
 * PHP
+* MySQL
 * HTML
 * CSS
 * Javascript
