@@ -48,7 +48,11 @@ class API{
 	public function getCategorias(){
 		
 		$url = 'https://api.themoviedb.org/3/genre/movie/list?api_key=' . $this->getKey() . $this->getLanguage();
-		$json = file_get_contents($url);
+		if(!$json = file_get_contents($url)){
+            echo "<script type='text/javascript'> document.location = '../error.html'; </script>";
+            exit();
+		}
+
 		$json_data = json_decode($json, true);
 		return $json_data['genres'];
 	}
@@ -56,7 +60,11 @@ class API{
 	public function getPopulares($page){
 		
 		$url = "https://api.themoviedb.org/3/movie/popular?api_key=" . $this->getKey() . $this->getLanguage() ."&page=$page";
-		$json = file_get_contents($url);
+		if(!$json = file_get_contents($url)){
+            echo "<script type='text/javascript'> document.location = '../error.html'; </script>";
+            exit();
+		}
+
 		$json_data = json_decode($json, true);
 		$totalPages = $json_data['total_pages'];
 
@@ -87,7 +95,10 @@ class API{
 	}
 	public function getLancamentos($page){
 		$url = "https://api.themoviedb.org/3/movie/upcoming?api_key=" . $this->getKey() . $this->getLanguage() ."&page=$page&region=BR";
-		$json = file_get_contents($url);
+		if(!$json = file_get_contents($url)){
+            echo "<script type='text/javascript'> document.location = '../error.html'; </script>";
+            exit();
+		}
 		$json_data = json_decode($json, true);
 		$totalPages = $json_data['total_pages'];
 
@@ -115,7 +126,10 @@ class API{
 	}
 	public function getCartaz($page){
 		$url = "https://api.themoviedb.org/3/movie/now_playing?api_key=" . $this->getKey() . $this->getLanguage() ."&page=$page&region=BR";
-		$json = file_get_contents($url);
+		if(!$json = file_get_contents($url)){
+            echo "<script type='text/javascript'> document.location = '../error.html'; </script>";
+            exit();
+		}
 		$json_data = json_decode($json, true);
 		$totalPages = $json_data['total_pages'];
 
@@ -143,7 +157,10 @@ class API{
 	}
 	public function getAvaliados($page){
 		$url = "https://api.themoviedb.org/3/movie/top_rated?api_key=" . $this->getKey() . $this->getLanguage() ."&page=$page";
-		$json = file_get_contents($url);
+		if(!$json = file_get_contents($url)){
+            echo "<script type='text/javascript'> document.location = '../error.html'; </script>";
+            exit();
+		}
 		$json_data = json_decode($json, true);
 		$totalPages = $json_data['total_pages'];
 
@@ -398,7 +415,10 @@ class API{
 	public function getDetailMovie($movie_id){
 		$movieArray = array();
 		$url = "https://api.themoviedb.org/3/movie/" . $movie_id . "?api_key=" . $this->getKey() . $this->getLanguage();
-		$json = file_get_contents($url);
+		if(!$json = file_get_contents($url)){
+            echo "<script type='text/javascript'> document.location = '../error.html'; </script>";
+            exit();
+		}
 		$json_data = json_decode($json, true);
 
 		array_push($movieArray, $json_data);
@@ -419,7 +439,10 @@ class API{
 	public function getDetailPerson($person_id){
 		$personArray = array();
 		$url = "https://api.themoviedb.org/3/person/" . $person_id . "?api_key=" . $this->getKey() . $this->getLanguage();
-		$json = file_get_contents($url);
+		if(!$json = file_get_contents($url)){
+            echo "<script type='text/javascript'> document.location = '../error.html'; </script>";
+            exit();
+		}
 		$json_data = json_decode($json, true);
 
 		array_push($personArray, $json_data);
@@ -439,7 +462,6 @@ class API{
 	public function getWorksPerson($id)
 	{
 		
-			
 		$url = "https://api.themoviedb.org/3/person/" . $id . "/movie_credits?api_key=" . $this->getKey() . $this->getLanguage();
 
 		$json = file_get_contents($url);
@@ -583,7 +605,10 @@ class API{
  	public function getPopularPeople($page){
 		
 		$url = "https://api.themoviedb.org/3/person/popular?api_key=" . $this->getKey() . $this->getLanguage() ."&page=$page";
-		$json = file_get_contents($url);
+		if(!$json = file_get_contents($url)){
+            echo "<script type='text/javascript'> document.location = '../error.html'; </script>";
+            exit();
+		}
 		$json_data = json_decode($json, true);
 		$totalPages = $json_data['total_pages'];
 
@@ -902,7 +927,10 @@ class API{
 		$url = "https://api.themoviedb.org/3/discover/movie?api_key=" . $this->getKey() . $this->getLanguage() ."&page=$page" 
 		. "&include_adult=$cont_adulto" . "&include_video=true" . "&with_genres=$genre_id";
 
-		$json = file_get_contents($url);
+		if(!$json = file_get_contents($url)){
+            echo "<script type='text/javascript'> document.location = '../error.html'; </script>";
+            exit();
+		}
 		$json_data = json_decode($json, true);
 
 		if(empty($json_data['results']))
@@ -945,7 +973,10 @@ class API{
 		$url = "https://api.themoviedb.org/3/search/$type?api_key=" . $this->getKey() . $this->getLanguage() ."&page=$page" 
 		. "&include_adult=$cont_adulto" . "&query=$search";
 
-		$json = file_get_contents($url);
+		if(!$json = file_get_contents($url)){
+            echo "<script type='text/javascript'> document.location = '../error.html'; </script>";
+            exit();
+		}
 		$json_data = json_decode($json, true);
 
 		if(empty($json_data['results']))
@@ -1074,7 +1105,10 @@ class API{
 		. "&include_adult=$cont_adulto" . "&with_genres=$genre_ids" . "&primary_release_year=$ano" . "&sort_by=$sort_by";
 
 
-		$json = file_get_contents($url);
+		if(!$json = file_get_contents($url)){
+            echo "<script type='text/javascript'> document.location = '../error.html'; </script>";
+            exit();
+		}
 		$json_data = json_decode($json, true);
 
 		if(empty($json_data['results']))
@@ -1120,7 +1154,10 @@ class API{
 			
 			$url = "https://api.themoviedb.org/3/movie/" . $id['idFilme'] . "?api_key=" . $this->getKey() . $this->getLanguage();
 
-			$json = file_get_contents($url);
+			if(!$json = file_get_contents($url)){
+            	echo "<script type='text/javascript'> document.location = '../error.html'; </script>";
+            	exit();
+			}
 			$json_data = json_decode($json, true);
 
 			$movie = $json_data;
@@ -1170,7 +1207,10 @@ class API{
 			
 			$url = "https://api.themoviedb.org/3/movie/" . $id['idFilme'] . "?api_key=" . $this->getKey() . $this->getLanguage();
 
-			$json = file_get_contents($url);
+			if(!$json = file_get_contents($url)){
+            	echo "<script type='text/javascript'> document.location = '../error.html'; </script>";
+            	exit();
+			}
 			$json_data = json_decode($json, true);
 
 			$movie = $json_data;
