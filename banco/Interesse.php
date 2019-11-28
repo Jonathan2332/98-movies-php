@@ -5,7 +5,7 @@ include_once '../conexao.php';
 class Interesse{
 	
 	protected $idFilme;
-	protected $nome;
+	protected $idUsuario;
 	
 	public function getIdFilme(){
 		return $this->idFilme;
@@ -15,12 +15,12 @@ class Interesse{
 		$this->idFilme = $idFilme;
 	}
 
-	public function getNome(){
-		return $this->nome;
+	public function getIdUsuario(){
+		return $this->idUsuario;
 	}
 	
-	public function setNome($nome){
-		$this->nome = $nome;
+	public function setIdUsuario($idUsuario){
+		$this->idUsuario = $idUsuario;
 	}
 	
 	public function inserir($dados){

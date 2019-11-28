@@ -19,11 +19,11 @@
   }
   body
   {
-      background-image: url(../res/imgs/fundo.jpg);
+      background-image: url(../res/imgs/bg-login.jpg);
   }
 </style>
 
-<center><img id="logo" class="logo" src="../res/imgs/98-movies-logo.png"></center>
+<center><img id="logo" class="logo" src="../res/imgs/logo-full.png"></center>
 
 <div id="painel" class="container" style="margin-top: 70px; max-width: 600px;">
 

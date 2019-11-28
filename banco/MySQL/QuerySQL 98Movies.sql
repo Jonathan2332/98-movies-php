@@ -24,3 +24,15 @@ insert into favorito(idFilme, idUsuario) values (2, 1);
 insert into favorito(idFilme, idUsuario) values (3, 1);
 insert into favorito(idFilme, idUsuario) values (475557, 1);
 
+SET FOREIGN_KEY_CHECKS=0;
+truncate table endereco;
+truncate table perfil;
+truncate table usuario;
+truncate table usuario_categoria;
+truncate table favorito;
+truncate table foto;
+truncate table interesse;
+truncate table favorito;
+truncate table permissao;
+truncate table pagina;
+SET FOREIGN_KEY_CHECKS=1;

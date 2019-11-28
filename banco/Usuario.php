@@ -310,7 +310,7 @@ class Usuario{
 
 		$sqlfoto = "select * from foto where idUsuario = $idUsuario";
 		$resultado = $oConexao->recuperarTodos($sqlfoto);
-		$file = empty($resultado) ? '' : '../usuario/upload/imgs/' . $resultado[0]['caminho'];
+		$file = empty($resultado) ? '' : '../res/imgs/usuario/upload/' . $resultado[0]['caminho'];
 
 		$sql = "delete from usuario_categoria where idUsuario = $idUsuario;";
 
@@ -367,7 +367,7 @@ class Usuario{
 		$senha = $dados['password'];
 		$keepLoged = !empty($dados['keepLoged']) ? 1 : 0;
 
-		$sql = "select idUsuario, idEndereco, sexo, nome, idPerfil, email, senha, cont_adulto from usuario where(email like '$email' and senha like '$senha');";
+		$sql = "select idUsuario, idEndereco, sexo, nome, idPerfil, email, cont_adulto from usuario where(email like '$email' and senha like '$senha');";
 
 		$oConexao = new Conexao();
 		$dados = $oConexao->recuperarTodos($sql);
@@ -434,7 +434,7 @@ class Usuario{
 		$this->senha = $usuarios[0]['senha'];
 		$this->cont_adulto = empty($usuarios[0]['cont_adulto']) ? 0 : $usuarios[0]['cont_adulto'];
 		$this->age = date_diff(date_create($usuarios[0]['data_nasc']), date_create('now'))->y;
-		$this->foto = empty($foto[0]['caminho']) ? '../res/imgs/no-perfil-photo.png' : '../usuario/upload/imgs/' . $foto[0]['caminho'];
+		$this->foto = empty($foto[0]['caminho']) ? '../res/imgs/no-perfil-photo.png' : '../res/imgs/usuario/upload/' . $foto[0]['caminho'];
 		$this->preferencias = $categorias;
 
 	}
@@ -460,7 +460,7 @@ class Usuario{
             $nomeArquivo = date('YmdHis'). '_' . $idUsuario . '_' . $_FILES['foto']['name'];
             
             $origem = $_FILES['foto']['tmp_name'];
-            $destino = '../usuario/upload/imgs/' . $nomeArquivo;
+            $destino = '../res/imgs/usuario/upload/' . $nomeArquivo;
             if(move_uploaded_file($origem , $destino))
             {
             	$oldFile = $this->checkExist($idUsuario);
@@ -475,7 +475,7 @@ class Usuario{
             	{
             		if(!empty($oldFile))
             			if (file_exists($destino)) 
-    						unlink('../usuario/upload/imgs/' . $oldFile[0]['caminho']);
+    						unlink('../res/imgs/usuario/upload/' . $oldFile[0]['caminho']);
 
             		return true;
             	}
@@ -518,7 +518,7 @@ class Usuario{
 	public function possuiAcesso()
     {
 
-        $raizUrl = '/php/98movies/';
+        $raizUrl = '/projetos/98movies/';
 
         $url = parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH);
 

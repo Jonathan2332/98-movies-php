@@ -62,6 +62,14 @@ class Perfil{
 		return $oConexao->recuperarTodos($sql);
 	}
 
+	public function listFromApi(){
+
+		$url = 'https://98movies.000webhostapp.com/restful/api/rest/view/perfil/list.php';
+		$json = file_get_contents($url);
+		$json_data = json_decode($json, true);
+		return $json_data;
+	}
+
 	public function carregarPorId($idPerfil){
 	
 		$sql = "select * from perfil where idPerfil = $idPerfil";

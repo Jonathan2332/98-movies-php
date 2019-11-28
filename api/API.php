@@ -937,7 +937,7 @@ class API{
 		{
 			echo '<br>
 				  <div class="text-center"><h4><b style="color: #5bc0de"> 
-				  <i class="fas fa-info-circle fa-1x" style="color: #5bc0de"></i> Nenhum resultado encontrado para esta categoria.</b><h4>
+				  <i class="fas fa-info-circle fa-1x" style="color: #5bc0de"></i> Nenhum resultado encontrado para esta categoria.</b></h4>
 				  </div>
 				  <input type="hidden" name="items-page" id="items-page" value="' .count($json_data['results']). '" />
 				  <input type="hidden" name="total-items" id="total-items" value="' .$json_data['total_results']. '" />';
@@ -983,7 +983,7 @@ class API{
 		{
 			echo '<br>
 				  <div class="text-center"><h4><b style="color: #5bc0de"> 
-				  <i class="fas fa-info-circle fa-1x" style="color: #5bc0de"></i> Nenhum resultado encontrado para esta busca.</b><h4>
+				  <i class="fas fa-info-circle fa-1x" style="color: #5bc0de"></i> Nenhum resultado encontrado para esta busca.</b></h4>
 				  </div>
 				  <input type="hidden" name="items-page" id="items-page" value="' .count($json_data['results']). '" />
 				  <input type="hidden" name="total-items" id="total-items" value="' .$json_data['total_results']. '" />';
@@ -1067,7 +1067,7 @@ class API{
 		{
 			echo '<br>
 				  <div class="text-center"><h4><b style="color: #5bc0de"> 
-				  <i class="fas fa-info-circle fa-1x" style="color: #5bc0de"></i> Nenhum resultado encontrado para esta categoria.</b><h4>
+				  <i class="fas fa-info-circle fa-1x" style="color: #5bc0de"></i> Nenhum resultado encontrado para esta categoria.</b></h4>
 				  </div>
 				  <input type="hidden" name="items-page" id="items-page-' . $genre_id . '" value="' .count($json_data['results']). '" />
 				  <input type="hidden" name="total-items" id="total-items-' . $genre_id . '" value="' .$json_data['total_results']. '" />';
@@ -1115,7 +1115,7 @@ class API{
 		{
 			echo '<br>
 				  <div class="text-center"><h4><b style="color: #5bc0de"> 
-				  <i class="fas fa-info-circle fa-1x" style="color: #5bc0de"></i> Nenhum resultado encontrado para este filtro.</b><h4>
+				  <i class="fas fa-info-circle fa-1x" style="color: #5bc0de"></i> Nenhum resultado encontrado para este filtro.</b></h4>
 				  </div>
 				  <input type="hidden" name="items-page" id="items-page" value="' .count($json_data['results']). '" />
 				  <input type="hidden" name="total-items" id="total-items" value="' .$json_data['total_results']. '" />';

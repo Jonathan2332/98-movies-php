@@ -1,8 +1,8 @@
 <div class="navbar-bg-custom-light"></div>
 
-<nav id="navbar" class="navbar navbar-expand-lg navbar-light rounded custom-navbar">
-  <img src="../res/imgs/98-movies.png" width="56" height="56">
-  <button id="button-toggle" onclick="checkBackground('light')" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<nav id="navbar" class="navbar navbar-expand-lg navbar-light rounded custom-navbar" value="light">
+  <img src="../res/imgs/logo-simple.png" width="56" height="56">
+  <button id="button-toggle" onclick="checkBackground()" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
   </button>
 
@@ -51,8 +51,9 @@
                     <a class="dropdown-item" href="../usuario/lista.php?type=interesses">Lista de interesses</a>
                     <?php if($_SESSION['usuario']['idPerfil'] == 2) { ?>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="../usuario/gerenciar.php">Gerenciar Usuários</a>
+                        <a class="dropdown-item" href="../perfil/index.php">Gerenciar Perfis</a>
                         <a class="dropdown-item" href="../pagina/index.php">Gerenciar Páginas</a>
+                        <a class="dropdown-item" href="../usuario/gerenciar.php">Gerenciar Usuários</a>
                     <?php } ?>
                 </div>
             </li>

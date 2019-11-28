@@ -126,14 +126,14 @@ $status = $resultado ? 1 : 0;
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  	<link rel="shortcut icon" href="../res/imgs/98-movies.ico" type="image/x-icon"/>
-	<link type="text/css" rel="stylesheet" href="../../js/bootstrap/css/bootstrap.css">
-	<link rel="stylesheet" href="../../js/animate.css"/>
-  	<link rel="stylesheet" href="../../js/sweetalert/dist/sweetalert2.css">
-  	<link rel="stylesheet" href="../../js/sweetalert-themes/dark/dark.css">
+  	<link rel="shortcut icon" href="../res/imgs/favicon.ico" type="image/x-icon"/>
+	<link type="text/css" rel="stylesheet" href="../res/js/bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" href="../res/js/animate.css"/>
+  	<link rel="stylesheet" href="../res/js/sweetalert/dist/sweetalert2.css">
+  	<link rel="stylesheet" href="../res/js/sweetalert-themes/dark/dark.css">
 
-	<script type="text/javascript" src="../../js/jquery-2.1.4.js"></script>
-  	<script src="../../js/sweetalert/dist/sweetalert2.js"></script>
+	<script type="text/javascript" src="../res/js/jquery-2.1.4.js"></script>
+  	<script src="../res/js/sweetalert/dist/sweetalert2.js"></script>
 
 </head>
 <body>

@@ -25,7 +25,7 @@ $categorias = $oApi->getCategorias();
   }
 
 </style>
-<center style="background-image: linear-gradient(rgb(92,184,92), #fff); "><img id="logo" class="logo" src="../res/imgs/98-movies-logo.png"></center>
+<center style="background-image: linear-gradient(rgb(92,184,92), #fff); "><img id="logo" class="logo" src="../res/imgs/logo-full.png"></center>
 
   <div class="container" style="margin-top: 40px;">
 
@@ -34,8 +34,8 @@ $categorias = $oApi->getCategorias();
           <div class="card-body">
             
           <form action="processamento.php?acao=salvar&cadastro=true" method="post">
-            <input type="hidden" type="number" name="idPerfil" id="idPerfil" value="1" />
-            <input type="hidden" type="number" name="cont_adulto" id="cont_adulto" value="false" />
+            <input type="number" name="idPerfil" id="idPerfil" value="1" hidden/>
+            <input type="number" name="cont_adulto" id="cont_adulto" value="0" hidden/>
             <div class="form-group">
 
               <label style="font-size: 20px; color:green; "><span class="fas fa-user"></span> Dados Pessoais</label><br />
@@ -61,10 +61,12 @@ $categorias = $oApi->getCategorias();
                     <option value="F">Feminino</option>
                     <option value="O">Outros</option>
                   </select>
+
                 </div>
+
               </div>
 
-              <br />
+              <br id="space" style="display: none;" />
               
               <div class="row">
                 <div class="col-12 col-sm-6">
@@ -338,6 +340,7 @@ if(detectmob())
 {
     document.getElementById("logo").className = "logoMobile";
     document.getElementById("header").className = "card-header cadastroMobile";
+    document.getElementById("space").style.display = "block";
 }
 
 </script>

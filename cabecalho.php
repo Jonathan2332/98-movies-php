@@ -17,40 +17,35 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <link rel="shortcut icon" href="../res/imgs/98-movies.ico" type="image/x-icon"/>
+  <link rel="shortcut icon" href="../res/imgs/favicon.ico" type="image/x-icon"/>
 
-	<link type="text/css" rel="stylesheet" href="../../js/bootstrap/css/bootstrap.css">
-	<link rel="stylesheet" href="../../js/bootstrap-select/dist/css/bootstrap-select.css">
-	<link rel="stylesheet" href="../../js/fancybox/dist/jquery.fancybox.css"/>
-	<link rel="stylesheet" href="../../js/fleximages/flex-images.css" />
-	<link rel="stylesheet" href="../../js/animate.css"/>
-  <link rel="stylesheet" href="../../js/sweetalert/dist/sweetalert2.css">
-  <link href="../../js/fontawesome/css/all.css" rel="stylesheet"> <!--load all styles -->
-  <link rel="stylesheet" href="../../js/sweetalert-themes/dark/dark.css">
-  <link rel="stylesheet" href="../../js/datepicker/dist/css/bootstrap-datepicker3.css">
-  <link rel="stylesheet" href="../../js/simplePagination/simplePagination.css">
+	<link type="text/css" rel="stylesheet" href="../res/js/bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" href="../res/js/bootstrap-select/dist/css/bootstrap-select.css">
+	<link rel="stylesheet" href="../res/js/fancybox/dist/jquery.fancybox.css"/>
+	<link rel="stylesheet" href="../res/js/fleximages/flex-images.css" />
+	<link rel="stylesheet" href="../res/js/animate.css"/>
+  <link rel="stylesheet" href="../res/js/sweetalert/dist/sweetalert2.css">
+  <link href="../res/js/fontawesome/css/all.css" rel="stylesheet"> <!--load all styles -->
+  <link rel="stylesheet" href="../res/js/sweetalert-themes/dark/dark.css">
+  <link rel="stylesheet" href="../res/js/datepicker/dist/css/bootstrap-datepicker3.css">
+  <link rel="stylesheet" href="../res/js/simplePagination/simplePagination.css">
 
-	<script type="text/javascript" src="../../js/jquery-2.1.4.js"></script>
-	<script type="text/javascript" src="../../js/jquery.maskedinput.min.js"></script>
-  <script type="text/javascript" src="../../js/jquery.maskMoney.min.js"></script>
-  <script type="text/javascript" src="../../js/bootstrap/js/bootstrap.bundle.min.js"></script>
-	<script src="../../js/bootstrap-select/dist/js/bootstrap-select.js"></script>
-	<script src="../../js/fleximages/flex-images.js"></script>
-	<script src="../../js/fancybox/dist/jquery.fancybox.js"></script>
-  <script src="../../js/sweetalert/dist/sweetalert2.js"></script>
-  <script src="../../js/datepicker/dist/js/bootstrap-datepicker.js"></script>
-  <script src="../../js/datepicker/dist/locales/bootstrap-datepicker.pt-BR.min.js"></script>
-  <script src="../../js/simplePagination/jquery.simplePagination.js"></script>
+	<script type="text/javascript" src="../res/js/jquery-2.1.4.js"></script>
+	<script type="text/javascript" src="../res/js/jquery.maskedinput.min.js"></script>
+  <script type="text/javascript" src="../res/js/jquery.maskMoney.min.js"></script>
+  <script type="text/javascript" src="../res/js/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="../res/js/bootstrap-select/dist/js/bootstrap-select.js"></script>
+	<script src="../res/js/fleximages/flex-images.js"></script>
+	<script src="../res/js/fancybox/dist/jquery.fancybox.js"></script>
+  <script src="../res/js/sweetalert/dist/sweetalert2.js"></script>
+  <script src="../res/js/datepicker/dist/js/bootstrap-datepicker.js"></script>
+  <script src="../res/js/datepicker/dist/locales/bootstrap-datepicker.pt-BR.min.js"></script>
+  <script src="../res/js/simplePagination/jquery.simplePagination.js"></script>
 
 
 </head>
 
 <style type="text/css">
-  @font-face
-  {
-      font-family: FilmLetters;
-      src: url('../res/FilmLetters.ttf');
-  }
   .menu-mobile {         
     max-height: 200px;
     overflow-y: auto;
