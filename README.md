@@ -1,8 +1,6 @@
 # ![](res/imgs/logo-full.png?raw=true "98 Movies")
 Este projeto foi idealizado apenas para fazer parte do meu portfólio como demonstração de experiência e aprendizado.
 
-**[Demonstração do Projeto](https://98movies.000webhostapp.com/)**
-
 **[Este projeto também está disponível em Angular](https://github.com/Jonathan2332/98-movies-angular)**
 
 ### O que é este projeto?
