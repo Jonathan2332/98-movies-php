@@ -1,4 +1,4 @@
-# ![](res/imgs/logo-full.png?raw=true "98 Movies")
+# ![](/res/imgs/logo-full.png "98 Movies")
 Este projeto foi idealizado apenas para fazer parte do meu portfólio como demonstração de experiência e aprendizado.
 
 **[Este projeto também está disponível em Angular](https://github.com/Jonathan2332/98-movies-angular)**
